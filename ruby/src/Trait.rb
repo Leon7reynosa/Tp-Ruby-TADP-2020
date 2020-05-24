@@ -29,9 +29,6 @@ class Trait
 
   def &(unTrait)
     nuevo = Trait.new()
-    Trait.setEstrategia(EstrategiaSumaPreferencial.new)
-    return nuevo +
-
     diccionario_generado = sin_repetidos(self.dame_tu_diccionario, unTrait.dame_tu_diccionario, EstrategiaSumaPreferencial.new)
     nuevo.agregar_metodos(diccionario_generado)
     nuevo.setEstrategia(self.getEstrategia)
